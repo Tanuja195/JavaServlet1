@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>LMT</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.xhtml</welcome-file>
+    <welcome-file>book.html</welcome-file>
+  </welcome-file-list>
+  
+  <!-- ADD BOOKS SERVLET -->
+  
+  <servlet>
+  	<servlet-name>Library</servlet-name>
+  	<servlet-class>com.cdac.AddBookServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Library</servlet-name>
+  	<url-pattern>/book</url-pattern>
+  </servlet-mapping>
+  
+  <!-- VIEW BOOKS SERVLET -->
+  <servlet>
+    <servlet-name>ViewBooks</servlet-name>
+    <servlet-class>com.cdac.viewBooksServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewBooks</servlet-name>
+    <url-pattern>/viewBooks</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
